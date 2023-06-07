@@ -1,0 +1,74 @@
+TOPICS COVERED : Access Modifiers
+
+Access modifiers determine the visibility and accessibility of classes, methods, variables,
+and constructors in Java OOP, allowing for proper encapsulation and control of access to class members.
+
+
+               +----------------------+
+               |       Public         |
+               +----------------------+
+               |                      |
+               |   Accessible from    |
+               |   anywhere           |
+               +----------------------+
+                         |
+                         |
+                         |
+                         v
+               +----------------------+
+               |     Protected        |
+               +----------------------+
+               |                      |
+               |   Accessible within  |
+               |   the same package   |
+               |   and subclasses     |
+               +----------------------+
+                         |
+                         |
+                         |
+                         v
+               +----------------------+
+               |      Default         |
+               +----------------------+
+               |                      |
+               |   Accessible within  |
+               |   the same package   |
+               +----------------------+
+                         |
+                         |
+                         |
+                         v
+               +----------------------+
+               |      Private         |
+               +----------------------+
+               |                      |
+               |   Accessible within  |
+               |   the same class     |
+               +----------------------+
+
+1. public:
+
+    - Accessible from anywhere.
+    - Can be accessed by any class or object, regardless of package or inheritance relationship.
+
+2. protected:
+
+    - Accessible within the same package.
+    - Accessible to subclasses, even if they are in a different package.
+    - Can be accessed by any class within the same package or any subclass, regardless of package.
+
+3. Default (package-private):
+
+    - No explicit keyword used.
+    - Accessible within the same package.
+    - Not accessible outside the package.
+    - Can be accessed by any class within the same package.
+
+4. private:
+
+    - Accessible within the same class only.
+    - Not accessible outside the class.
+    - Can be accessed only from within the class where it is defined.
+
+
+

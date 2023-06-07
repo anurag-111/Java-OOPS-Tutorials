@@ -1,0 +1,107 @@
+TOPICS COVERED : Types of Inheritance
+
+1. Single Inheritance:
+    - In single inheritance, a subclass extends a single superclass.
+    - This is the most common type of inheritance.
+
+            +-------------------+
+            |    Superclass     |
+            +-------------------+
+                   ^
+                   |
+            +-------------------+
+            |   Subclass        |
+            +-------------------+
+            |   extends         |
+            |   Superclass      |
+            +-------------------+
+
+
+2. Multilevel Inheritance:
+    - In multilevel inheritance, a subclass extends another subclass, creating a chain of inheritance.
+    - Each subclass becomes a superclass for the next subclass in the hierarchy.
+
+            +-------------------+
+            |    Superclass     |
+            +-------------------+
+                   ^
+                   |
+            +-------------------+
+            |   Subclass        |
+            +-------------------+
+                   ^
+                   |
+            +-------------------+
+            |   Sub-subclass    |
+            +-------------------+
+
+
+3. Hierarchical Inheritance:
+    - In hierarchical inheritance, multiple subclasses extend a single superclass.
+    - This allows for the creation of a class hierarchy with different specialized subclasses.
+
+            +-------------------------------------------------------------------+
+            |                           Superclass                              |
+            +-------------------------------------------------------------------+
+                   ^                       ^                           ^
+                   |                       |                           |
+            +-------------------+          |                           |
+            |   Subclass 1      |          |                           |
+            +-------------------+          |                           |
+                                           |                           |
+                                           |                           |
+                                    +-------------------+              |
+                                    |   Subclass 2      |              |
+                                    +-------------------+              |
+                                                                       |
+                                                                       |
+                                                                +-------------------+
+                                                                |   Subclass 3      |
+                                                                +-------------------+
+
+
+4. Multiple Inheritance (not supported in Java):
+    - Multiple inheritance refers to a class inheriting from more than one superclass.
+    - Java does not support multiple inheritance of classes, but it allows multiple inheritance of interfaces.
+
+            +-------------------+                    +-------------------+
+            |    Superclass 1   |                    |    Superclass 2   |
+            +-------------------+                    +-------------------+
+                   ^                                           ^
+                   |                                           |
+            +------------------------------------------------------------+
+            |                       Subclass                             |
+            +------------------------------------------------------------+
+
+
+5. Hybrid Inheritance (combination of multiple inheritance and hierarchical inheritance):
+    - Hybrid inheritance combines multiple inheritance and hierarchical inheritance.
+    - It involves multiple classes and interfaces in a single inheritance hierarchy.
+    - Since Java does not support multiple inheritance, hybrid inheritance is also not possible in Java.
+      Just like multiple inheritance you need to achieve this using interfaces.
+
+            +-------------------+
+            |    Superclass     |
+            +-------------------+
+                   ^
+                   |
+            +-------------------+
+            |   Subclass        |
+            +-------------------+
+                   ^
+                   |
+            +-------------------+
+            |   Interface 1     |
+            +-------------------+
+                   ^
+                   |
+            +-------------------+
+            |   Interface 2     |
+            +-------------------+
+
+    - In the above diagram, we have a superclass at the top, followed by a subclass that extends
+      the superclass. Additionally, there are two interfaces, Interface 1 and Interface 2, which
+      the subclass implements. This combination of subclassing a superclass and implementing multiple
+      interfaces represents hybrid inheritance.
+
+

@@ -1,0 +1,96 @@
+package com.oopsDemo.tutorial7.genericsDemo.wildcardExample;
+
+import java.util.Arrays;
+import java.util.List;
+
+/**
+ * Implementation of a custom generic ArrayList.
+ *
+ * @param <T> the type of elements in the ArrayList
+ */
+public class WildcardExample<T extends Number> {
+
+    private Object[] data;
+    private static final int DEFAULT_SIZE = 10;
+    private int size = 0; // also working as index value
+
+    public WildcardExample() {
+        data = new Object[DEFAULT_SIZE];
+    }
+
+    /**
+     * Adds an element to the ArrayList.
+     *
+     * @param element the element to add
+     */
+    public void add(T element) {
+        if (isFull()) {
+            resize();
+        }
+        data[size++] = element;
+    }
+
+    private void resize() {
+        Object[] temp = new Object[data.length * 2];
+
+        // copy the current items into the new arrayList
+        int i = 0;
+        while (i < data.length) {
+            temp[i] = data[i];
+            i++;
+        }
+        data = temp;
+    }
+
+    private boolean isFull() {
+        return size == data.length;
+    }
+
+    // Removes the last element from the ArrayList.
+    public void remove() {
+        --size;
+    }
+
+    /**
+     * Prints the element at the specified index.
+     *
+     * @param index the index of the element
+     */
+    public void print(int index) {
+        System.out.print(data[index] + " ");
+    }
+
+    /**
+     * Returns the number of elements in the ArrayList.
+     *
+     * @return the number of elements
+     */
+    public int size() {
+        return size;
+    }
+
+    /**
+     * Sets the element at the specified index to the given value.
+     *
+     * @param index the index of the element to set
+     * @param value the new value to set
+     */
+    public void set(int index, T value) {
+        data[index] = value;
+    }
+
+    // The method processList can accept a List of any type, but the exact type is not
+    // known within the method. This allows for greater flexibility and re-usability of the method.
+    public void processList(List<?> list) {
+        // Code to process the list, independent of its actual type
+    }
+
+    @Override
+    public String toString() {
+        return "CustomGenArrayList { " +
+                "data = " + Arrays.toString(data) +
+                ", size = " + size +
+                '}';
+    }
+
+}

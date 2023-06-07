@@ -1,0 +1,49 @@
+TOPICS COVERED : Object Cloning
+
+->  The Cloneable Interface:
+
+    To enable cloning for a class, it must implement
+    the Cloneable interface. This interface acts as a marker interface, indicating that
+    the class supports cloning. However, it does not define the clone() method itself.
+
+->  The clone() Method:
+
+    The clone() method is defined in the Object class and is protected.
+    To use cloning, you need to override this method in your class and make it public.
+    The overridden clone() method should call super.clone() and handle any additional
+    cloning operations specific to your class.
+
+->  Shallow Copy vs Deep Copy:
+
+    By default, the clone() method performs a shallow copy,
+    which means that it creates a new object and copies the references of instance variables
+    from the original object to the cloned object. However, if the object contains references
+    to other objects, a shallow copy will create a new object with references to the same
+    underlying objects. To achieve a deep copy, where both the object and its referenced
+    objects are cloned, you need to manually implement the deep copying logic in the clone() method.
+
+->  CloneNotSupportedException:
+
+    The clone() method throws a CloneNotSupportedException if the
+    class does not implement Cloneable. It's important to catch and handle this exception
+    appropriately when performing cloning operations.
+
+->  Custom Cloning Logic:
+
+    If your class contains mutable fields or references to mutable
+    objects, you need to ensure that the cloning process creates copies of those objects
+    as well. This typically requires implementing a deep copy strategy by cloning the
+    referenced objects recursively.
+
+->  Immutable Classes:
+
+    For classes that have only immutable fields, such as primitive types
+    or String objects, shallow copying is usually sufficient, as the cloned object and
+    the original object will share the same values.
+
+->  Best Practice:
+
+    Instead of relying solely on clone(), it's recommended to consider
+    alternative approaches for object copying, such as copy constructors or factory methods.
+    These approaches provide more control and clarity over the cloning process, and they avoid
+    some of the limitations and complexities associated with using clone().

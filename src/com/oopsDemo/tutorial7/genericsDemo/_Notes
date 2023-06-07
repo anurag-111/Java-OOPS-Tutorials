@@ -1,0 +1,113 @@
+TOPICS COVERED : Generics, Wildcards
+
+-> Generics :
+
+   >> In a nutshell, generics enable types (classes and interfaces) to be parameters when
+      defining classes, interfaces and methods.
+
+   >> Much like the more familiar formal parameters used in method declarations, type parameters
+      provide a way for you to re-use the same code with different inputs.
+
+   >> The difference is that the inputs to formal parameters are values,
+      while the inputs to type parameters are types.
+
+-> But what does it actually mean ?
+
+   >> Generics in Java allow you to create code that can work with different types of data,
+      it's like having a "placeholder" for a type that you can fill in later.
+
+   >> Think of it like a reusable container or blueprint. You can create a generic class or
+      method and specify that it can work with any type. When you actually use the class or method,
+      you provide the specific type you want to work with.
+
+   >> For example, let's say you have a Box class that can hold any type of object. Instead of creating a
+      separate Box class for every type (Box for integers, Box for strings, etc.), you can create a
+      single generic Box class. Then, when you want to use the Box class for integers, you just specify
+      it as `Box<Integer>`. If you want to use it for strings, you specify `Box<String>`, and so on.
+
+-> Why Use Generics :
+
+    >> In a nutshell, generics enable types (classes and interfaces) to be parameters when defining classes,
+       interfaces and methods. Much like the more familiar formal parameters used in method declarations,
+       type parameters provide a way for you to re-use the same code with different inputs.
+
+    >> The difference is that the inputs to formal parameters are values, while the inputs to type
+       parameters are types.
+
+    >> Code that uses generics has many benefits over non-generic code:
+
+    >> Stronger type checks at compile time.
+
+        -- A Java compiler applies strong type checking to generic code and issues errors if the code
+           violates type safety. Fixing compile-time errors is easier than fixing runtime errors, which
+           can be difficult to find.
+
+    >> Elimination of casts.
+
+        -- The following code snippet without generics requires casting:
+               List list = new ArrayList();
+               list.add("hello");
+               String s = (String) list.get(0);
+               When re-written to use generics, the code does not require casting:
+               List<String> list = new ArrayList<String>();
+               list.add("hello");
+               String s = list.get(0);   // no cast
+
+    >> Enabling programmers to implement generic algorithms.
+
+        -- By using generics, programmers can implement generic algorithms that work on collections
+           of different types, can be customized, and are type safe and easier to read.
+
+
+-> Wildcards :
+
+    >> The wildcard (?) in the context of generics is used to represent an unknown type
+       or a type that is not specified. It allows for greater flexibility when working
+       with generic classes and methods.
+
+    >> public class WildcardExample<T extends Number>
+        - The type parameter T is bounded to Number using the syntax T extends Number.
+          This means that the type T can be any subclass of Number, such as Integer, Double, or Float.
+          The use of the wildcard or a bounded type parameter depends on the specific requirements of your code.
+
+    >> The wildcard is commonly used in scenarios where the exact type is not important, or when you
+       want to write code that can work with different types.
+
+    >> Wildcards in Java generics allow for greater flexibility in working with generic types.
+       Types :
+
+        1. Upper Bounded Wildcard (`? extends Type`):
+           - Allows any type that is a subtype of the specified type.
+           - Useful when you want to accept a parameter of a specific type or any of its subtypes.
+           - Allows reading from the collection but not writing.
+
+              public void processList(List<? extends Number> list) {
+                  // Can read elements from the list
+                  for (Number number : list) {
+                      System.out.println(number);
+                  }
+              }
+
+        2. Lower Bounded Wildcard (`? super Type`):
+           - Allows any type that is a supertype of the specified type.
+           - Useful when you want to accept a parameter of a specific type or any of its supertypes.
+           - Allows writing to the collection but not reading.
+
+              public void addToList(List<? super Integer> list) {
+                  // Can add elements to the list
+                  list.add(10);
+              }
+
+        3. Unbounded Wildcard (`?`):
+           - Represents an unknown type.
+           - Useful when you want to work with a generic type but don't need to know its specific type.
+           - Allows reading from the collection but not writing.
+
+              public void printList(List<?> list) {
+                  // Can read elements from the list
+                  for (Object element : list) {
+                      System.out.println(element);
+                  }
+              }
+
+

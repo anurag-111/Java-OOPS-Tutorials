@@ -1,0 +1,36 @@
+/*
+    TOPICS COVERED : Nested Interfaces
+
+-> Nested interfaces refer to the concept of defining an interface within another interface or class.
+   In Java, interfaces can be nested inside other interfaces or classes to organize related functionality
+   and create a hierarchical structure. Nested interfaces can provide contracts or abstractions specific to
+   the context of the outer interface or class.
+
+-> Some key points about nested interfaces:
+
+    1. Syntax :
+        The syntax for declaring a nested interface is the same as declaring a regular interface,
+        but within the body of another interface or class.
+
+    2. Access Modifiers :
+        Like regular interfaces, nested interfaces can have public or package-private access
+        modifiers. By default, they have package-private access, accessible within the same package.
+
+    3. Scope :
+        A nested interface is accessible within the scope of the outer interface or class.
+        Outside the scope, it can be accessed using the fully qualified name, including the outer
+        interface or class name.
+
+    4. Member of the Enclosing Type :
+        A nested interface is considered a member of the enclosing type
+        (outer interface or class). This means that it can access all the members (fields, methods,
+        nested classes/interfaces) of the enclosing type, including private members.
+
+-> Nested interfaces can be used to encapsulate related behaviors or define contracts for inner components
+   of a class. They provide a clean and logical way to organize functionality and maintain a clear
+   separation of concerns. Additionally, nested interfaces can be implemented by other classes or
+   nested classes to provide the necessary behavior.
+
+-> Overall, nested interfaces offer a powerful mechanism for creating modular and reusable code structures
+   within the Java programming language.
+/*

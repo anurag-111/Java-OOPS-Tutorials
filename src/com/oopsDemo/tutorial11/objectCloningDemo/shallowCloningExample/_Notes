@@ -1,0 +1,15 @@
+TOPICS COVERED : Shallow Cloning
+
+-> In Java, cloning refers to creating an exact copy of an object.
+
+>> Important Points :
+
+-> Shallow cloning is the default cloning mechanism provided by the clone() method,
+   where a new object is created, and all the instance variables of the original object
+   are copied to the cloned object.       ---------------------------------------------
+   -------------------------------
+
+-> However, if the object contains references to other objects, the references are simply
+   copied to the cloned object. This means that both the original object and the cloned
+   object will share the same underlying objects.        ------------------------------
+   ---------------------------------------------

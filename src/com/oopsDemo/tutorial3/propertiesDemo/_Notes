@@ -1,0 +1,29 @@
+-> Encapsulation:
+    Encapsulation is the practice of bundling related data (attributes) and
+    methods (behavior) into a single unit called a class. It allows for data hiding and
+    abstraction by providing access modifiers (public, private, protected) to control the
+    visibility and accessibility of class members.
+
+-> Inheritance:
+    Inheritance is a mechanism that enables a class to inherit properties and
+    behaviors from another class. It promotes code reuse and establishes an "is-a" relationship
+    between classes. In Java, single inheritance is supported for classes, where a subclass can
+    inherit from a single superclass. Multiple inheritance is achieved through interfaces.
+
+-> Polymorphism:
+    Polymorphism allows objects of different classes to be treated as objects
+    of a common superclass. It enables methods to be defined in a generic way, where they can
+    be overridden in subclasses to provide specific implementations. Polymorphism in Java is
+    achieved through method overriding and method overloading.
+
+-> Abstraction:
+    Abstraction involves the concept of representing essential features without
+    including the implementation details. Abstract classes and interfaces in Java provide a way
+    to define abstract types that can be extended or implemented by concrete classes. Abstract
+    classes cannot be instantiated, while interfaces define a contract for classes to implement.
+
+-> Modularity:
+    Modularity promotes code organization and maintainability by breaking down a
+    program into modular components. Java supports modular development through packages, which
+    group related classes and provide namespace management. Packages help in organizing code
+    and enable re-usability.

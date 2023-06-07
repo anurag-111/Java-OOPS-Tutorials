@@ -1,0 +1,27 @@
+TOPICS COVERED : Interfaces
+
+- Interface :
+
+    An Interface is defined as an abstract type used to specify the behavior of a class.
+    An interface in Java is a blueprint of a behaviour.
+    A Java interface contains static constants and abstract methods.
+    The interface in Java is a mechanism to achieve abstraction.
+    There can be only abstract methods in the Java interface, not the method body.
+    It is used to achieve abstraction and multiple inheritance in Java.
+
+- Static Methods in Interfaces :
+
+    In Java, until version 8, interfaces could only declare abstract methods, meaning
+    they couldn't contain any implementation code. However, starting from Java 8,
+    interfaces can also have static methods with a defined implementation.
+    Here are the rules for static methods in interfaces:
+
+        1. Declaration: Static methods in interfaces are declared using the static keyword.
+
+        2. Method Body: Unlike regular interface methods, static methods have a defined
+                        implementation within the interface itself. You can provide the
+                        implementation directly in the interface, using the method body.
+
+        3. Method Invocation: Static methods in interfaces are invoked using the interface
+                              name followed by the method name, without creating an instance
+                              of the interface.

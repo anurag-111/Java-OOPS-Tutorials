@@ -1,0 +1,50 @@
+TOPICS COVERED : `compareTo` Method And Its Connection To Sorting And Overriding:
+
+-> `compareTo` Method:
+  - The `compareTo` method is part of the `Comparable` interface in Java.
+
+  - It is used to compare objects of a class and determine their relative order.
+
+  - The method has the signature: `int compareTo(T other)`.
+
+  - In our example, the `Student` class implements the `Comparable` interface, so it provides
+    its own implementation of the `compareTo` method.
+
+  - The `compareTo` method compares the `marks` field of the current `Student` object (`this`)
+    with the `marks` field of another `Student` object (`o`).
+
+  - The return value of the `compareTo` method determines the ordering of the objects:
+    - If `this.marks` is less than `o.marks`, `compareTo` returns a negative value.
+    - If `this.marks` is greater than `o.marks`, `compareTo` returns a positive value.
+    - If `this.marks` is equal to `o.marks`, `compareTo` returns zero.
+
+-> Sorting and `compareTo` Method:
+  - The `Arrays.sort` method is used to sort an array of objects in Java.
+
+  - When we call `Arrays.sort` on an array of `Student` objects, it internally uses
+    the `compareTo` method to compare and order the objects.
+
+  - The sorting process involves multiple calls to the `compareTo` method to compare
+    pairs of `Student` objects.
+
+  - By providing the `compareTo` method in the `Student` class, we enable the `Arrays.sort` method
+    to correctly sort the `Student` objects based on their marks.
+
+  - The return values of the `compareTo` method are used by the sorting algorithm to arrange the
+    objects in the desired order, based on their marks.
+
+-> Overriding:
+
+  - Overriding occurs when a class provides its own implementation of a method
+    that is already defined in its superclass or interface.
+
+  - In our example, the `Student` class overrides the `compareTo` method inherited
+    from the `Comparable` interface.
+
+  - By implementing the `Comparable` interface and providing its own implementation of
+    `compareTo`, the `Student` class customizes the comparison behavior for `Student` objects.
+
+  - This allows us to define the sorting order based on the `marks` field of `Student` objects.
+
+  - Overriding the `compareTo` method ensures that the sorting algorithm correctly compares
+    and orders the `Student` objects based on their marks.
