@@ -1,6 +1,6 @@
 ## Java OOPS Tutorial
 
-Welcome to the Java OOPS Tutorial repository! This repository contains a collection of practical examples and exercises to help you learn object-oriented programming concepts and implementation in Java.
+This repository contains a collection of practical examples and exercises to help you learn object-oriented programming concepts and implementation in Java.
 
 ## Introduction
 
